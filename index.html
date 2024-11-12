@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Satisfaction Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1 id="title">Customer Satisfaction Survey</h1>
+    <p id="description">Please fill out this survey to help us improve our service</p>
+    <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+        <fieldset>
+            <!-- Nombre completo del usuario con id="name" -->
+            <label id="name-label" for="name">Enter Your Full Name: 
+                <input id="name" name="name" type="text" placeholder="Full Name" required />
+            </label>
+            
+            <!-- Correo electrónico del usuario con id="email" -->
+            <label id="email-label" for="email">Enter Your Email: 
+                <input id="email" name="email" type="email" placeholder="Email" required />
+            </label>
+            
+            <!-- Edad del usuario con id="number" y atributos min y max -->
+            <label id="number-label" for="number">Enter Your Age:
+                <input id="number" name="age" type="number" min="13" max="120" placeholder="Age" required />
+            </label>
+        </fieldset>
+
+        <!-- Nivel de satisfacción del usuario -->
+        <fieldset>
+            <legend>How satisfied are you with our service? (required)</legend>
+            <label for="satisfaction-very-satisfied">
+                <input id="satisfaction-very-satisfied" type="radio" name="satisfaction" value="Very Satisfied" required /> Very Satisfied
+            </label>
+            <label for="satisfaction-satisfied">
+                <input id="satisfaction-satisfied" type="radio" name="satisfaction" value="Satisfied" /> Satisfied
+            </label>
+            <label for="satisfaction-neutral">
+                <input id="satisfaction-neutral" type="radio" name="satisfaction" value="Neutral" /> Neutral
+            </label>
+            <label for="satisfaction-dissatisfied">
+                <input id="satisfaction-dissatisfied" type="radio" name="satisfaction" value="Dissatisfied" /> Dissatisfied
+            </label>
+            <label for="satisfaction-very-dissatisfied">
+                <input id="satisfaction-very-dissatisfied" type="radio" name="satisfaction" value="Very Dissatisfied" /> Very Dissatisfied
+            </label>
+        </fieldset>
+
+        <!-- Campo de selección con id="dropdown" -->
+        <fieldset>
+            <label for="dropdown">Would you recommend us to others?
+                <select id="dropdown" name="recommend" required>
+                    <option value="">(Select an option)</option>
+                    <option value="yes">Yes</option>
+                    <option value="maybe">Maybe</option>
+                    <option value="no">No</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <!-- Opciones para mejorar el servicio con checkboxes -->
+        <fieldset>
+            <legend>What could we improve? (Check all that apply)</legend>
+            <label for="improve-speed">
+                <input id="improve-speed" type="checkbox" name="improvements" value="speed" /> Speed
+            </label>
+            <label for="improve-quality">
+                <input id="improve-quality" type="checkbox" name="improvements" value="quality" /> Quality
+            </label>
+            <label for="improve-support">
+                <input id="improve-support" type="checkbox" name="improvements" value="sustomersupport"/> Customer Support
+            </label>
+            <label for="improve-options">
+                <input id="improve-options" type="checkbox" name="improvements" value="moreoptions" /> More Options
+            </label>
+        </fieldset>
+
+        <!-- Campo de comentarios adicionales -->
+        <fieldset>
+            <label for="comments">Additional comments:
+                <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Your feedback..."></textarea>
+            </label>
+        </fieldset>
+
+        <!-- Checkbox para aceptar términos y condiciones -->
+        <label for="terms-and-conditions">
+            <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" value="terms-and-conditions"/> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+        </label>
+
+        <!-- Botón de envío con id="submit" -->
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+</body>
+</html>
